@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,16 +7,11 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-header,
-section,
-footer {
-    padding: 3rem 10rem;
-}
+header, section, footer { padding: 3rem 12rem; }
 
 header {
     display: flex;
@@ -23,8 +19,7 @@ header {
     align-items: center;
 }
 
-section,
-footer {
+section, footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +33,7 @@ footer {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    flex-shrink: 0;
 }
 
 ul {
@@ -47,7 +43,6 @@ ul {
     margin: 0;
     gap: 16px;
     font-size: 14px;
-    flex-shrink: 0;
 }
 
 button {
@@ -56,11 +51,12 @@ button {
     font-weight: bold;
     border: 0;
     text-decoration-style: none;
+    flex-shrink: 0;
 }
 
 .hero {
     display: flex;
-    padding-bottom: 100px;
+    padding-bottom: 4rem;
 }
 
 .hero-text { width: 26em; }
@@ -91,13 +87,12 @@ button {
     margin-top: 12px;
 }
 
-.info {
-    padding-bottom: 7rem;
-}
+.info { padding-bottom: 7rem; }
 
 .info-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 5rem;
 }
 
@@ -123,12 +118,15 @@ button {
     margin-top: 1rem;
 }
 
-.info p {
-    margin-top: 1rem;
+.info p { margin-top: 1rem; }
+
+.quote { 
+    background-color: #e5e7e5;
 }
 
-.quote {
-    background-color: #e5e7e5;
+.quote-box {
+    max-width: 49rem;
+    padding: 5rem;
 }
 
 .quote p {
@@ -137,19 +135,21 @@ button {
     font-style: italic;
 }
 
-.quote .author {
+.author {
+    display: block;
+    width: 95%;
+    text-align: end;
     font-size: 24px;
     font-weight: bold;
-    margin-left: auto;
 }
 
 .end-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #3882f6;
     color: white;
-    width: 50rem;
-    padding: 2rem 6rem;
+    width: 100%;
+    padding: 2rem 1rem;
     border-radius: 5px;
     font-size: 14px;
 }
